@@ -8,13 +8,13 @@
     color="primary"
   >
     <v-btn value="top" :to="{ path: '/'}">
-      <span>Top Stories</span>
-      <v-icon>thumb_up</v-icon>
+      <span>Musei</span>
+      <v-icon>museum</v-icon>
     </v-btn>
 
     <v-btn value="code" :to="{ name: 'code-examples'}">
-      <span>Code Examples</span>
-      <v-icon>code</v-icon>
+      <span>Scan</span>
+      <v-icon>qr_code_scanner</v-icon>
     </v-btn>
 
     <v-btn value="favorites" :to="{ name: 'my-favorites'}">

@@ -24,13 +24,13 @@ const router = new Router({
       path: '/',
       name: 'top-stories',
       component: TopStories,
-      meta: new RouteMeta({ title: 'Top Stories' })
+      meta: new RouteMeta({ title: 'Musei' })
     },
     {
       path: '/code-examples',
       name: 'code-examples',
       component: CodeExamples,
-      meta: new RouteMeta({ title: 'Code Examples' })
+      meta: new RouteMeta({ title: 'Archeologia e Arte' })
     },
     {
       path: '/my-favorites',

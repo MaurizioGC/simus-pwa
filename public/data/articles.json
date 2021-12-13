@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Vue.js is the absolute rockstar of the JavaScript ecosystem",
-    "content": "Article coming soon",
-    "dateString": "22 Jan 2019",
-    "baseImageName": "winner",
+    "title": "Collezioni di Archeologia e d’Arte",
+    "content": "Le Collezioni di Preistoria, Archeologia Classica e Archeologia Medievale sono conservate nei laboratori del Dipartimento di Scienze Storiche e dei Beni Culturali",
+    "dateString": "21 giugno 2001",
+    "baseImageName": "archeologia",
     "articleType": "TOP_STORY",
     "isFavourite": true
   },
@@ -14,33 +14,33 @@
     "content": "Article coming soon",
     "dateString": "21 Jan 2019",
     "baseImageName": "prettier",
-    "articleType": "CODE_EXAMPLE",
+    "articleType": "",
     "isFavourite": false
   },
   {
     "id": 3,
-    "title": "The hottest tools in coding this year included React and Python",
+    "title": "Collezione di Strumenti di Fisica",
     "content": "Article coming soon",
-    "dateString": "20 Jan 2019",
-    "baseImageName": "working",
+    "dateString": "20 maggio 1997",
+    "baseImageName": "fisica",
     "articleType": "TOP_STORY",
     "isFavourite": false
   },
   {
     "id": 4,
-    "title": "What’s next for Vue.js? The road to Vue 3.0",
+    "title": "Le Collezioni di Preistoria, Archeologia Classica e Archeologia Medievale sono conservate nei laboratori del Dipartimento di Scienze Storiche e dei Beni Culturali e sono formate in massima parte da reperti provenienti dai progetti di ricerca archeologica; oltre a questi, le collezioni includono varie raccolte didattiche con repliche di crani di ominidi e di uomini preistorici, repliche di vasellame e utensili in pietra scheggiata, osso e metallo riprodotti con le tecniche dell’archeologia sperimentale, sezioni scheletriche di faune domestiche e selvatiche.",
     "content": "Article coming soon",
-    "dateString": "19 Jan 2019",
-    "baseImageName": "question",
+    "dateString": "",
+    "baseImageName": "archeologia",
     "articleType": "CODE_EXAMPLE",
     "isFavourite": false
   },
   {
     "id": 5,
-    "title": "Creating native mobile apps without writing native code",
+    "title": "Museo di Scienze della Terra",
     "content": "Article coming soon",
-    "dateString": "18 Jan 2019",
-    "baseImageName": "phone",
+    "dateString": "18 Jan 1998",
+    "baseImageName": "scienze-della-terra",
     "articleType": "TOP_STORY",
     "isFavourite": true
   },
@@ -50,7 +50,7 @@
     "content": "Article coming soon",
     "dateString": "17 Jan 2019",
     "baseImageName": "phone2",
-    "articleType": "CODE_EXAMPLE",
+    "articleType": "",
     "isFavourite": false
   }
 ]
