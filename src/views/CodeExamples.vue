@@ -1,8 +1,15 @@
 <template>
-
-  <div>
+    <v-card>
+      <v-card-title>test</v-card-title>
+      <p class="error">{{ error }}</p>
+      <p class="decode-result">Last result: <b>{{ result }}</b></p>
+      <v-responsive max-width="200px" max-height="200px">
+        <qrcode-stream @decode="onDecode" @init="onInit" />
+      </v-responsive>
+    </v-card>
+  <!-- <div>
     <NewsList :newsArticles="newsArticles"></NewsList>
-  </div>
+  </div> -->
 
 </template>
 
