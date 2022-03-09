@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       app
       fixed
       v-model="showMenu"
@@ -25,7 +25,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
     <v-app-bar
       app
@@ -33,7 +33,7 @@
       dark
       color="primary"
     >
-      <v-app-bar-nav-icon @click.stop="toggleMenu"></v-app-bar-nav-icon>
+      <!-- <v-app-bar-nav-icon @click.stop="toggleMenu"></v-app-bar-nav-icon> -->
 
       <v-toolbar-title>{{ title }}</v-toolbar-title>
 
