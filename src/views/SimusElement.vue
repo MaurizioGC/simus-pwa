@@ -1,11 +1,11 @@
 <template>
-    <v-card>
+    <v-card class="mt-10">
       <v-card-title>test</v-card-title>
-      <p class="error">{{ error }}</p>
-      <p class="decode-result">Last result: <b>{{ result }}</b></p>
-      <v-responsive max-width="200px" max-height="200px">
+      <!-- <p class="error">{{ error }}</p>
+      <p class="decode-result">Last result: <b>{{ result }}</b></p> -->
+      <!-- <v-responsive max-width="200px" max-height="200px">
         <qrcode-stream @decode="onDecode" @init="onInit" />
-      </v-responsive>
+      </v-responsive> -->
     </v-card>
   <!-- <div>
     <NewsList :newsArticles="newsArticles"></NewsList>
@@ -24,7 +24,7 @@ import { ArticleType, NewsArticle } from '@/types';
     NewsList
   }
 })
-export default class TopStories extends Vue {
+export default class SimusElement extends Vue {
     newsArticles: NewsArticle[] = [];
 
     mounted () {

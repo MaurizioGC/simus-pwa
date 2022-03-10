@@ -1,20 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import store from '../store';
 
-import TopStories from '../views/TopStories.vue';
-import CodeExamples from '../views/CodeExamples.vue';
+import Simus from '../views/Simus.vue';
+import SimusElement from '../views/SimusElement.vue';
 import MyFavorites from '../views/MyFavorites.vue';
 
 Vue.use(Router);
-
-class RouteMeta {
-  title: string;
-
-  constructor ({ title }: { title: string }) {
-    this.title = title;
-  }
-}
 
 const router = new Router({
   mode: 'history',
@@ -23,28 +14,23 @@ const router = new Router({
     {
       path: '/',
       name: 'top-stories',
-      component: TopStories,
-      meta: new RouteMeta({ title: 'Musei' })
+      component: Simus
     },
     {
       path: '/code-examples',
       name: 'code-examples',
-      component: CodeExamples,
-      meta: new RouteMeta({ title: 'Archeologia e Arte' })
+      component: SimusElement
     },
     {
       path: '/my-favorites',
       name: 'my-favorites',
-      component: MyFavorites,
-      meta: new RouteMeta({ title: 'Favorites' })
+      component: MyFavorites
     }
   ]
 });
 
 // This callback runs before every route change, including on initial load
 router.beforeEach((to, from, next) => {
-  const routeMeta = to.meta as RouteMeta;
-  store.dispatch('topToolbar/changeTitle', routeMeta.title);
   next();
 });
 

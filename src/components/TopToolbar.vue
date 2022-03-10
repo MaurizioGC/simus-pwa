@@ -1,41 +1,23 @@
 <template>
   <div>
 
-    <!-- <v-navigation-drawer
-      app
-      fixed
-      v-model="showMenu"
-
-    >
-      <v-list dense>
-        <v-list-item @click="doNothing">
-          <v-list-item-action>
-            <v-icon>settings</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item @click="doNothing">
-          <v-list-item-action>
-            <v-icon>help</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Help</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
-
     <v-app-bar
-      app
-      fixed
+      
+      absolute
       dark
+      shrink-on-scroll
+      prominent
       color="primary"
+      fade-img-on-scroll
+      :src="require('@/assets/simus_logo.png')"
     >
-      <!-- <v-app-bar-nav-icon @click.stop="toggleMenu"></v-app-bar-nav-icon> -->
 
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <template v-slot:img="{ props }">
+        <v-img
+          v-bind="props"
+          contain
+        ></v-img>
+      </template>
 
     </v-app-bar>
 
@@ -44,11 +26,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Getter } from 'vuex-class';
+// import { Getter } from 'vuex-class';
 
 @Component
 export default class TopToolbar extends Vue {
-  @Getter('title', { namespace: 'topToolbar' }) title!: string;
+  // @Getter('title', { namespace: 'topToolbar' }) title!: string;
 
   showMenu = false;
 

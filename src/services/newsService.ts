@@ -10,7 +10,7 @@ class NewsService {
       })
       .then((serverArticles) => {
         const newsArticles = serverArticles
-          .filter((serverArticle: any) => serverArticle.articleType === articleType)
+          .filter((serverArticle: NewsArticle) => serverArticle.articleType === articleType)
           .map(NewsService.map);
 
         return newsArticles;
@@ -27,7 +27,7 @@ class NewsService {
       })
       .then((serverArticles) => {
         const newsArticles = serverArticles
-          .filter((serverArticle: any) => serverArticle.isFavourite === true)
+          .filter((serverArticle: NewsArticle) => serverArticle.isFavourite === true)
           .map(NewsService.map);
 
         return newsArticles;
@@ -37,7 +37,7 @@ class NewsService {
       });
   }
 
-  private static map (serverArticle: any): NewsArticle {
+  private static map (serverArticle: NewsArticle): NewsArticle {
     return {
       id: serverArticle.id,
       title: serverArticle.title,

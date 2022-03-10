@@ -1,7 +1,3 @@
-// Store modules state
-export interface TopToolbarState {
-  title: string;
-}
 
 export enum ArticleType {
   TopStory = 'TOP_STORY',
@@ -16,9 +12,4 @@ export interface NewsArticle {
   baseImageName: string;
   articleType: ArticleType;
   isFavourite: boolean;
-}
-
-// Store root state
-export interface RootState {
-  topToolbar: TopToolbarState;
 }

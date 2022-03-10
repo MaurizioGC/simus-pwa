@@ -17,7 +17,7 @@ import { NewsArticle } from '@/types';
     NewsList
   }
 })
-export default class TopStories extends Vue {
+export default class MyFavourites extends Vue {
   newsArticles: NewsArticle[] = [];
 
   mounted () {
