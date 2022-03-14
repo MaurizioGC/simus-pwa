@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\simus"
+		}
+	],
+  "settings": {
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.root": "/dist",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.https": {
+      "enable": true,
+      "cert": "C:\\Sviluppo\\vuejs\\vuetify-mobile-app\\https\\localhost.pem",
+      "key": "C:\\Sviluppo\\vuejs\\vuetify-mobile-app\\https\\localhost.key",
+      "passphrase": "mau.test"
+    },
+    "liveServer.settings.multiRootWorkspaceName": "vuetify-mobile-app"
+  }
+}

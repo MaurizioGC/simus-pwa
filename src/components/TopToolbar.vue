@@ -2,7 +2,7 @@
   <div>
 
     <v-app-bar
-      
+      app
       absolute
       dark
       shrink-on-scroll

@@ -1,7 +1,7 @@
 <template>
   <v-app>
 
-    <TopToolbar class="mb-3"></TopToolbar>
+    <TopToolbar></TopToolbar>
 
     <v-main>
       <router-view></router-view>

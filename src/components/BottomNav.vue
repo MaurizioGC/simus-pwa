@@ -4,23 +4,29 @@
     app
     fixed
     grow
-    height="36px"
+    height="38px"
     v-model="activeItem"
     color="primary"
+    background-color="#F5F5F5"
   >
-    <v-btn value="top" :to="{ path: '/'}">
+    <v-btn class="pt-1" value="top" :to="{ path: '/'}">
       <span>Musei</span>
       <v-icon>museum</v-icon>
     </v-btn>
 
-    <v-btn value="code" :to="{ name: 'code-examples'}">
+    <v-btn class="pt-1" value="qrcode" :to="{ name: 'qrcode'}">
       <span>Scan</span>
       <v-icon>qr_code_scanner</v-icon>
     </v-btn>
 
-    <v-btn value="favorites" :to="{ name: 'my-favorites'}">
-      <span>Favorites</span>
+    <v-btn class="pt-1" value="favorites" :to="{ name: 'preferiti'}">
+      <span>Preferiti</span>
       <v-icon>favorite</v-icon>
+    </v-btn>
+
+    <v-btn class="pt-1" value="cerca" :to="{ name: 'cerca'}">
+      <span>Cerca</span>
+      <v-icon>search</v-icon>
     </v-btn>
   </v-bottom-navigation>
 

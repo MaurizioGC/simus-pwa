@@ -2,8 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Simus from '../views/Simus.vue';
+import QrCode from '../views/QrCode.vue';
 import SimusElement from '../views/SimusElement.vue';
-import MyFavorites from '../views/MyFavorites.vue';
+import Preferiti from '../views/Preferiti.vue';
+import Cerca from '../views/Cerca.vue';
 
 Vue.use(Router);
 
@@ -13,18 +15,28 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'top-stories',
+      name: 'musei',
       component: Simus
     },
     {
-      path: '/code-examples',
-      name: 'code-examples',
+      path: '/qrcode',
+      name: 'qrcode',
+      component: QrCode
+    },
+    {
+      path: '/elemento',
+      name: 'elemento',
       component: SimusElement
     },
     {
-      path: '/my-favorites',
-      name: 'my-favorites',
-      component: MyFavorites
+      path: '/preferiti',
+      name: 'preferiti',
+      component: Preferiti
+    },
+    {
+      path: '/cerca',
+      name: 'cerca',
+      component: Cerca
     }
   ]
 });
