@@ -5,6 +5,7 @@
       <v-img max-width="300px" src="https://drive.google.com/uc?export=view&id=0B_bb2Yu5nQndNzk4UkJBUndEV2c">
       </v-img>
     </v-row>
+    <p>test</p>
     <!-- <v-row>
       <p v-if="cacheAvailable" @click="cacheMe">Cache Available. Click mo to cache image</p>
     </v-row> -->
