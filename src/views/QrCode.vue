@@ -8,7 +8,7 @@
       </v-responsive>
     </v-row>
     <v-card class="mt-5">
-      <v-img
+      <v-img max-height="80px"
         src="../assets/istruzioniHeader.png"
       >
         <v-card-title @click.stop="showInstructions" class="justify-center white--text text-h3 font-weight-black">

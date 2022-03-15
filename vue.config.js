@@ -44,21 +44,21 @@ module.exports = {
     manifestOptions: {
       background_color: "#42b983"
     },
-    workboxOptions: {
-      runtimeCaching: [{
-        urlPattern: new RegExp('drive.google.com*'),
-        method: "GET",
-        handler: 'StaleWhileRevalidate',
-        options: {
-          cacheName: 'preferiti',
-          expiration: {
-            maxEntries: 30
-          },
-          cacheableResponse: {
-            statuses: [0, 200]
-          }
-        }
-      }]
-    }
+    // workboxOptions: {
+    //   runtimeCaching: [{
+    //     urlPattern: new RegExp('^https://drive.google.com/'),
+    //     method: "GET",
+    //     handler: 'StaleWhileRevalidate',
+    //     options: {
+    //       cacheName: 'preferiti',
+    //       expiration: {
+    //         maxEntries: 30
+    //       },
+    //       cacheableResponse: {
+    //         statuses: [0, 200]
+    //       }
+    //     }
+    //   }]
+    // }
   }
 };
