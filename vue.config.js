@@ -38,27 +38,19 @@ module.exports = {
     'vuetify'
   ],
   pwa: {
-    themeColor: "#42b983",
-    msTileColor: "#42b983",
-    appleMobileWebAppCache: "yes",
+    themeColor: '#4DBA87',
+    msTileColor: '#000000',
+    appleMobileWebAppCache: 'yes',
     manifestOptions: {
-      background_color: "#42b983"
+      background_color: '#42b983',
+      start_url: '/'
     },
-    // workboxOptions: {
-    //   runtimeCaching: [{
-    //     urlPattern: new RegExp('^https://drive.google.com/'),
-    //     method: "GET",
-    //     handler: 'StaleWhileRevalidate',
-    //     options: {
-    //       cacheName: 'preferiti',
-    //       expiration: {
-    //         maxEntries: 30
-    //       },
-    //       cacheableResponse: {
-    //         statuses: [0, 200]
-    //       }
-    //     }
-    //   }]
-    // }
+    name: 'Simus PWA',
+    shortName: 'Simus',
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      swSrc: './src/sw.js',
+      swDest: 'service-worker.js'
+    }
   }
 };

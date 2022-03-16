@@ -5,8 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    '@vue/standard',
-    '@vue/typescript/recommended'
+    // '@vue/standard',
+    // '@vue/typescript/recommended'
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -17,7 +17,8 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     semi: ['error', 'always'],
     '@typescript-eslint/semi': 'off',
-    'no-unexpected-multiline': 'error'
+    'no-unexpected-multiline': 'error',
+    'no-unused-vars' : 0,
   },
   overrides: [
     {

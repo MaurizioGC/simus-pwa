@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import newsService from '../services/newsService';
+// import newsService from '../services/newsService';
 import NewsList from '../components/NewsList.vue';
 import { NewsArticle } from '@/types';
 import axios from 'axios';
@@ -38,8 +38,8 @@ import axios from 'axios';
   }
 })
 export default class Cerca extends Vue {
-  newsArticles: NewsArticle[] = [];
-  cacheAvailable: boolean = 'caches' in self;
+  // newsArticles: NewsArticle[] = [];
+  // cacheAvailable: boolean = 'caches' in self;
   isActive = true;
   info= '';
   // public async cacheMe () {
@@ -53,12 +53,14 @@ export default class Cerca extends Vue {
       .then(response => {
         this.info = response.data;
         console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
       });
-
-    newsService.getFavorites()
-      .then((newsArticles: NewsArticle[]) => {
-        this.newsArticles = newsArticles;
-      });
+    // newsService.getFavorites()
+    //   .then((newsArticles: NewsArticle[]) => {
+    //     this.newsArticles = newsArticles;
+    //   });
   }
 }
 </script>
