@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
-/**
- * See workbox documentation for details about the lifecyle events of a service worker.
+/** * See workbox documentation for details about the lifecyle events of a service worker.
  * https://developers.google.com/web/tools/workbox/modules/workbox-window#important_service_worker_lifecycle_moments
  */
 import { Workbox } from 'workbox-window';

@@ -1,35 +1,6 @@
-// workboxOptions: {
-//   runtimeCaching: [{
-//     urlPattern: new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
-//     handler: 'cacheFirst',
-//     options: {
-//       cacheName: 'google-fonts',
-//       expiration: {
-//         maxEntries: 30
-//       },
-//       cacheableResponse: {
-//         statuses: [0, 200]
-//       }
-//     }
-//   }]
-// }
-// pwa: {
-//   workboxOptions: {
-//     runtimeCaching: [{
-//       urlPattern: new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
-//       handler: 'networkFirst',
-//       options: {
-//         cacheName: 'google-fonts',
-//         expiration: {
-//           maxEntries: 30
-//         },
-//         cacheableResponse: {
-//           statuses: [0, 200]
-//         }
-//       }
-//     }]
-//   }
-// }
+// devServer: {
+//   https: true
+// },
 module.exports = {
   configureWebpack: {
     devtool: 'source-map'
@@ -42,15 +13,42 @@ module.exports = {
     msTileColor: '#000000',
     appleMobileWebAppCache: 'yes',
     manifestOptions: {
-      background_color: '#42b983',
-      start_url: '/'
+      "name": "Simus PWA",
+      "short_name": "Simus PWA",
+      "theme_color": "#4DBA87",
+      "icons": [
+        {
+          "src": "./img/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "./img/icons/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "src": "./img/icons/android-chrome-maskable-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        },
+        {
+          "src": "./img/icons/android-chrome-maskable-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ],
+      "background_color": "#42b983"
     },
     name: 'Simus PWA',
     shortName: 'Simus',
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: './src/sw.js',
-      swDest: 'service-worker.js'
+      swDest: 'service-worker.js',
+      maximumFileSizeToCacheInBytes: 3000000
     }
   }
 };

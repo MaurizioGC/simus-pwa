@@ -16,7 +16,7 @@
         </v-card-title>
       </v-img>
       <v-card-text v-show="showNew">
-        <v-row class="mt-2" align-content="space-between">
+        <v-row class="mt-2" justify="center" align="center">
           <v-col
             cols="5"
             align="center"
@@ -28,23 +28,23 @@
           </v-col>
           <v-col>
             <v-list dense>
-            <v-list-item-group
-              color="primary"
-            >
-              <v-list-item
-                class="ml-n2"
-                v-for="(item, i) in items"
-                :key="i"
+              <v-list-item-group
+                color="primary"
               >
-                <v-list-item-icon>
-                  <v-icon>{{item.icon}}</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title v-text="item.text"></v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-item-group>
-          </v-list>
+                <v-list-item
+                  class="ml-n2"
+                  v-for="(item, i) in items"
+                  :key="i"
+                >
+                  <v-list-item-icon>
+                    <v-icon>{{item.icon}}</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title v-text="item.text"></v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
+            </v-list>
           </v-col>
         </v-row>
       </v-card-text>

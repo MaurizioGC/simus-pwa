@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <iframe
       :srcdoc="info"
       width = "100%"
@@ -18,11 +18,11 @@
         <v-img
           max-width="300px"
           lazy-src="../assets/no-image.jpg"
-          src="https://drive.google.com/uc?export=view&id=0B_bb2Yu5nQndNzk4UkJBUndEV2c">
+          src="https://drive.google.com/uc?export=view&id=1eRp08-WLPG1oSc60p16-cDUXYJ4ejXzx">
         </v-img>
       </v-row>
     </v-lazy>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">

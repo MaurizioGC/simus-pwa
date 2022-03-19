@@ -1,15 +1,15 @@
 <template>
 
-  <div>
+  <v-container>
     <NewsList :newsArticles="newsArticles"></NewsList>
     <v-row justify="center" class="mt-10">
-      <v-img max-width="300px" src="https://drive.google.com/uc?export=view&id=0B_bb2Yu5nQndNzk4UkJBUndEV2c">
+      <v-img max-width="300px" src="https://drive.google.com/uc?export=view&id=1eRp08-WLPG1oSc60p16-cDUXYJ4ejXzx">
       </v-img>
     </v-row>
     <!-- <v-row>
       <p v-if="cacheAvailable" @click="cacheMe">Cache Available. Click mo to cache image</p>
     </v-row> -->
-  </div>
+  </v-container>
 
 </template>
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { ref } from 'vue';
 
 export const useServiceWorker = (forceUpdate = false) => {
