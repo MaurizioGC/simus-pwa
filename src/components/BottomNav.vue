@@ -4,7 +4,7 @@
     app
     fixed
     grow
-    height="38px"
+    height="40px"
     v-model="activeItem"
     color="primary"
     background-color="#F5F5F5"
