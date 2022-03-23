@@ -1,7 +1,7 @@
 <template>
 
   <v-container>
-    <NewsList :newsArticles="newsArticles"></NewsList>
+    <MuseoDettaglio :museums="museums"></MuseoDettaglio>
     <v-row justify="center" class="mt-10">
       <v-img max-width="300px" src="https://drive.google.com/uc?export=view&id=1eRp08-WLPG1oSc60p16-cDUXYJ4ejXzx">
       </v-img>
@@ -15,28 +15,32 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import newsService from '../services/newsService';
-import NewsList from '../components/NewsList.vue';
-import { NewsArticle } from '@/types';
+import simusService from '../services/SimusService';
+import MuseoDettaglio from '../components/MuseoDettaglio.vue';
+import { Museum } from '@/types';
 
 @Component({
   components: {
-    NewsList
+    MuseoDettaglio
   }
 })
 export default class Preferiti extends Vue {
-  newsArticles: NewsArticle[] = [];
-  cacheAvailable: boolean = 'caches' in self;
+  museums: Museum[] = [];
 
+
+  // TODO esplorare: ipotesi caching dei preferiti... oppure indexedDB con localForage 
+  
+  // cacheAvailable: boolean = 'caches' in self;
+  
   // public async cacheMe () {
   //   let cache = await caches.open('preferiti');
   //   cache.put('https://drive.google.com/uc?export=view&id=0B_bb2Yu5nQndNzk4UkJBUndEV2c').then(()=> console.log("cached"));
   // }
 
   mounted () {
-    newsService.getFavorites()
-      .then((newsArticles: NewsArticle[]) => {
-        this.newsArticles = newsArticles;
+    simusService.getMuseums()
+      .then((museums: Museum[]) => {
+        this.museums = museums;
       });
   }
 }

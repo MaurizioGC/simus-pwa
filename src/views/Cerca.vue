@@ -29,13 +29,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 // import newsService from '../services/newsService';
-import NewsList from '../components/NewsList.vue';
-import { NewsArticle } from '@/types';
+import MuseoDettaglio from '../components/MuseoDettaglio.vue';
+import { Museum } from '@/types';
 import axios from 'axios';
 
 @Component({
   components: {
-    NewsList
+    MuseoDettaglio
   }
 })
 export default class Cerca extends Vue {

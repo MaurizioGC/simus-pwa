@@ -109,6 +109,7 @@ function proxyRequest(caches, request) {
         }).catch(function () {
           // debugger;
           // Placeholder image for the fallback
+          // inserire pagina ... :(
           return fetch("./thumbnails/photoPlaceholder.png", { mode: "no-cors" });
         });
     });
@@ -127,6 +128,7 @@ self.addEventListener("activate", function (event) {
 self.addEventListener("fetch", function (event) {
   var request = event.request;
 
+  // Inserisce in cache le immagini e le risorse da google docs e drive
   if (request.method !== "GET" && 
     (!request.url.match(/\.(jpe?g|png|gif|svg)$/) ||
     !request.url.match(/^https:\/\/docs.google.com/) ||

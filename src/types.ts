@@ -1,15 +1,15 @@
 
-export enum ArticleType {
-  TopStory = 'TOP_STORY',
-  CodeExample = 'CODE_EXAMPLE'
-}
+// export enum ArticleType {
+//   TopStory = 'TOP_STORY',
+//   CodeExample = 'CODE_EXAMPLE'
+// }
 
-export interface NewsArticle {
+export interface Museum {
   id: number;
   title: string;
   content: string;
-  dateString: string;
+  // dateString: string;
   baseImageName: string;
-  articleType: ArticleType;
-  isFavourite: boolean;
+  // articleType: ArticleType;
+  // isFavourite: boolean;
 }

@@ -3,24 +3,24 @@
 
     <v-container fluid grid-list-lg>
       <v-layout row wrap>
-        <v-flex xs12 v-for="newsArticle in newsArticles" :key="newsArticle.id">
+        <v-flex xs12 v-for="museum in museums" :key="museum.id">
           <v-card>
             <v-container fluid grid-list-lg>
               <v-layout row>
                 <v-flex xs9>
                   <div>
                     <div class="subheading font-weight-medium">
-                      {{ newsArticle.title }}
+                      {{ museum.title }}
                     </div>
-                    <div>{{ newsArticle.dateString }}</div>
+                    <div>{{ museum.dateString }}</div>
                   </div>
                 </v-flex>
                 <v-flex xs3>
                   <v-img
                     contain
-                    :src="`/thumbnails/${newsArticle.baseImageName}.png`"
-                    :srcset="`/thumbnails/${newsArticle.baseImageName}.png 1x,
-                             /thumbnails/${newsArticle.baseImageName}@2x.png 2x`"
+                    :src="`/thumbnails/${museum.baseImageName}.png`"
+                    :srcset="`/thumbnails/${museum.baseImageName}.png 1x,
+                             /thumbnails/${museum.baseImageName}@2x.png 2x`"
                     height="72px"
                     transition="false"
                   ></v-img>
@@ -38,10 +38,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { NewsArticle } from '@/types';
+import { Museum } from '@/types';
 
 @Component
-export default class NewsList extends Vue {
-  @Prop({ type: Array, required: true }) newsArticles!: NewsArticle[];
+export default class MuseoDettaglio extends Vue {
+  @Prop({ type: Array, required: true }) museums!: Museum[];
 }
 </script>

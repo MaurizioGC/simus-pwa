@@ -1,29 +1,29 @@
 <template>
 
   <div>
-    <NewsList :newsArticles="newsArticles"></NewsList>
+    <MuseoDettaglio :museums="museums"></MuseoDettaglio>
   </div>
 
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import newsService from '../services/newsService';
-import NewsList from '../components/NewsList.vue';
-import { ArticleType, NewsArticle } from '@/types';
+import simusService from '../services/SimusService';
+import MuseoDettaglio from '../components/MuseoDettaglio.vue';
+import { Museum } from '@/types';
 
 @Component({
   components: {
-    NewsList
+    MuseoDettaglio
   }
 })
 export default class TopStories extends Vue {
-  newsArticles: NewsArticle[] = [];
+  museums: Museum[] = [];
 
   mounted () {
-    newsService.getArticlesByType(ArticleType.TopStory)
-      .then((newsArticles: NewsArticle[]) => {
-        this.newsArticles = newsArticles;
+    simusService.getMuseums()
+      .then((museums: Museum[]) => {
+        this.museums = museums;
       });
   }
 }

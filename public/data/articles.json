@@ -3,54 +3,48 @@
     "id": 1,
     "title": "Collezioni di Archeologia e d’Arte",
     "content": "Le Collezioni di Preistoria, Archeologia Classica e Archeologia Medievale sono conservate nei laboratori del Dipartimento di Scienze Storiche e dei Beni Culturali",
-    "dateString": "21 giugno 2001",
-    "baseImageName": "archeologia",
-    "articleType": "TOP_STORY",
-    "isFavourite": true
+    "baseImageName": "archeologia"
   },
   {
     "id": 2,
     "title": "Prettier 1.15 Code Formatter Adds Angular and Vue.js Support",
     "content": "Article coming soon",
-    "dateString": "21 Jan 2019",
-    "baseImageName": "prettier",
-    "articleType": "",
-    "isFavourite": false
+    "baseImageName": "prettier"
   },
   {
     "id": 3,
     "title": "Collezione di Strumenti di Fisica",
     "content": "Article coming soon",
-    "dateString": "20 maggio 1997",
-    "baseImageName": "fisica",
-    "articleType": "TOP_STORY",
-    "isFavourite": false
+    "baseImageName": "fisica"
   },
   {
     "id": 4,
     "title": "Le Collezioni di Preistoria, Archeologia Classica e Archeologia Medievale sono conservate nei laboratori del Dipartimento di Scienze Storiche e dei Beni Culturali e sono formate in massima parte da reperti provenienti dai progetti di ricerca archeologica; oltre a questi, le collezioni includono varie raccolte didattiche con repliche di crani di ominidi e di uomini preistorici, repliche di vasellame e utensili in pietra scheggiata, osso e metallo riprodotti con le tecniche dell’archeologia sperimentale, sezioni scheletriche di faune domestiche e selvatiche.",
     "content": "Article coming soon",
-    "dateString": "",
-    "baseImageName": "archeologia",
-    "articleType": "CODE_EXAMPLE",
-    "isFavourite": false
+    "baseImageName": "archeologia"
   },
   {
     "id": 5,
     "title": "Museo di Scienze della Terra",
     "content": "Article coming soon",
-    "dateString": "18 Jan 1998",
-    "baseImageName": "scienze-della-terra",
-    "articleType": "TOP_STORY",
-    "isFavourite": true
+    "baseImageName": "scienze-della-terra"
   },
   {
     "id": 6,
     "title": "Ionic Announces Alpha Release of Vue.js Integration",
     "content": "Article coming soon",
-    "dateString": "17 Jan 2019",
-    "baseImageName": "phone2",
-    "articleType": "",
-    "isFavourite": false
+    "baseImageName": "phone2"
+  },
+  {
+    "id": 7,
+    "title": "Ionic Announces Alpha Release of Vue.js Integration",
+    "content": "Article coming soon",
+    "baseImageName": "phone2"
+  },
+  {
+    "id": 8,
+    "title": "Ionic Announces Alpha Release of Vue.js Integration",
+    "content": "Article coming soon",
+    "baseImageName": "phone2"
   }
 ]
