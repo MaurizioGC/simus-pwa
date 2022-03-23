@@ -1,37 +1,37 @@
 <template>
-    <v-card class="mt-10">
-      <v-card-title>test</v-card-title>
-      <!-- <p class="error">{{ error }}</p>
-      <p class="decode-result">Last result: <b>{{ result }}</b></p> -->
-      <!-- <v-responsive max-width="200px" max-height="200px">
-        <qrcode-stream @decode="onDecode" @init="onInit" />
-      </v-responsive> -->
-    </v-card>
-  <!-- <div>
-    <NewsList :newsArticles="newsArticles"></NewsList>
-  </div> -->
+  <v-card class="mt-10">
+    <v-card-title>test</v-card-title>
+    <v-card-text>
+        nome: {{slug}} - {{folderData}} 
+     </v-card-text>
+  </v-card>
 
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import newsService from '../services/newsService';
-import NewsList from '../components/NewsList.vue';
-import { ArticleType, NewsArticle } from '@/types';
+import axios from 'axios';
+
 
 @Component({
   components: {
-    NewsList
+    //NewsList
   }
 })
 export default class SimusElement extends Vue {
-    newsArticles: NewsArticle[] = [];
+  title(){
+    // return this.folderData.
+  }
 
-    mounted () {
-      newsService.getArticlesByType(ArticleType.CodeExample)
-        .then((newsArticles: NewsArticle[]) => {
-          this.newsArticles = newsArticles;
-        });
-    }
+  description(){}
+  
+  images(){}
+
+  videos(){}
+
+  audios(){}
+
+  folderData=this.$route.params.folderData;
+  slug=this.$route.params.slug;
 }
 </script>

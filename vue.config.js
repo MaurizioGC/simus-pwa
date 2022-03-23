@@ -42,7 +42,7 @@ module.exports = {
       ],
       "background_color": "#42b983"
     },
-    name: 'Simus PWA',
+    name: 'Simus Totem Virtuale',
     shortName: 'Simus',
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {

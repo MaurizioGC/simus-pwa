@@ -1,12 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Simus from '../views/Simus.vue';
-import QrCode from '../views/QrCode.vue';
-import SimusElement from '../views/SimusElement.vue';
-import Preferiti from '../views/Preferiti.vue';
-import Cerca from '../views/Cerca.vue';
-
 Vue.use(Router);
 
 const router = new Router({
@@ -16,27 +10,27 @@ const router = new Router({
     {
       path: '/',
       name: 'musei',
-      component: Simus
+      component: ()=>import('@/views/Simus.vue')
     },
     {
       path: '/qrcode',
       name: 'qrcode',
-      component: QrCode
+      component: ()=>import('@/views/QrCode.vue')
     },
     {
-      path: '/elemento',
+      path: '/elemento/:slug',
       name: 'elemento',
-      component: SimusElement
+      component: ()=>import('@/views/SimusElement.vue')
     },
     {
       path: '/preferiti',
       name: 'preferiti',
-      component: Preferiti
+      component: ()=>import('@/views/Preferiti.vue')
     },
     {
       path: '/cerca',
       name: 'cerca',
-      component: Cerca
+      component: ()=>import('@/views/Cerca.vue')
     }
   ]
 });

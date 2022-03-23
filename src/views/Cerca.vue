@@ -2,9 +2,10 @@
   <v-container>
     <iframe
       :srcdoc="info"
+      frameborder='0'
       width = "100%"
-      height="600px"
-      style="border:none;display:block;"
+      scrolling="no"
+      ref="doc"
     ></iframe>
     <v-lazy
       v-model="isActive"
@@ -42,25 +43,33 @@ export default class Cerca extends Vue {
   // cacheAvailable: boolean = 'caches' in self;
   isActive = true;
   info= '';
+  results='';
+  spyTotHeight='unset';
   // public async cacheMe () {
   //   let cache = await caches.open('preferiti');
   //   cache.put('https://drive.google.com/uc?export=view&id=0B_bb2Yu5nQndNzk4UkJBUndEV2c').then(()=> console.log("cached"));
   // }
 
+  setH(elem:any){
+    this.spyTotHeight= elem.contentWindow.document.body.scrollHeight;
+    elem.style.height = elem.contentWindow.document.body.scrollHeight +100+ 'px';
+  }
+
   mounted () {
     axios
-      .get('https://docs.google.com/document/d/1U29jThK-S0XWhiTR41bKeltJsIPfmogJa5rAfk1pQd8/export')
+      .get('https://docs.google.com/document/d/1X8Ea9qJXVU-Fn8xGp1gU-3yo6FQaDKqTrw5QPFb5bt8/export', {
+        })
       .then(response => {
-        this.info = response.data;
+        const pp = response.data.replace(/\<body class\=\"c[0-9][0-9]?\"\>/gm,'<body>');
+        this.info=pp;
+        setTimeout(() => {
+          this.setH(this.$refs.doc);
+        }, 100); 
         console.log(response);
       })
       .catch(error => {
         console.log(error);
       });
-    // newsService.getFavorites()
-    //   .then((newsArticles: NewsArticle[]) => {
-    //     this.newsArticles = newsArticles;
-    //   });
   }
 }
 </script>

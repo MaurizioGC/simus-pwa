@@ -1,9 +1,9 @@
   <template>
   <v-container fluid>
     <p v-if="error!=''" class="error">{{ error }}</p>
-    <p class='decode-result mx-2'>Codice QR letto (Debug only): {{ result }}</p>
-    <v-row justify="center" class="mx-2 mt-2">
-      <v-responsive class="rounded-lg rounded-2">
+    <v-row justify="center" class="mx-2 my-1">
+      <!-- @click="onDecode('1QLWIsfItIJIU5FZPWNGEwzpQ7xMyaBWm')" -->
+      <v-responsive @click="onDecode('1QLWIsfItIJIU5FZPWNGEwzpQ7xMyaBWm')" class="rounded-lg rounded-2">
         <qrcode-stream @decode='onDecode' @init='onInit' />
       </v-responsive>
     </v-row>
@@ -55,6 +55,9 @@
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 import { QrcodeStream } from 'vue-qrcode-reader';
+import axios from 'axios';
+import urlSlug from 'url-slug';
+
 // import { NewsArticle } from '@/types';
 
 @Component({
@@ -72,7 +75,17 @@ export default class MyFavourites extends Vue {
           { text: 'Attendere i contenuti', icon: 'mdi-folder-multiple-image' }];
 
   onDecode (result: string) {
-    this.result = result;
+    axios
+      .get('https://script.google.com/macros/s/AKfycbzJqUXqCCZYMzji-iCkKvmPrrrpoiZr4mdnjMW9pQBYNRFUZeF6gvUdhEXkFJfZbVwD/exec?folderId='+result)  
+      .then(response => {
+        this.$router.push({ name:'elemento',
+                            params:{folderData:response.data,
+                                    slug:urlSlug(response.data.folderName)}});
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   showInstructions(){
